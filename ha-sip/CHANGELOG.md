@@ -1,5 +1,8 @@
 # Changelog
 
+## 3.7.1
+- beta messages support
+
 ## 3.7
 - Add stand-alone mode with MQTT support for running ha-sip outside  
   of Home Assistant OS (thanks eporsche@github for implementing this!)
