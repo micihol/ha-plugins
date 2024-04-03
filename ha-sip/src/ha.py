@@ -80,6 +80,13 @@ class PlaybackDoneMessage(TypedDict):
     sip_account: int
     message: str
 
+class MsgReceived(TypedDict):
+    event: Literal['msg_received']
+    type: Literal['message']
+    caller: str
+    parsed_caller: Optional[str]
+    sip_account: int
+    message: str
 
 WebhookEvent = Union[
     IncomingCallEvent,
@@ -90,7 +97,8 @@ WebhookEvent = Union[
     Timeout,
     RingTimeout,
     PlaybackDoneAudioFile,
-    PlaybackDoneMessage
+    PlaybackDoneMessage,
+    MsgReceived
 ]
 
 
